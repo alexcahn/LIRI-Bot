@@ -1,8 +1,8 @@
-// info for spotify
 require("dotenv").config();
 var Spotify = require("node-spotify-api");
 var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
+
 var axios = require('axios');
 
 var command = process.argv[2];
@@ -17,6 +17,10 @@ spotify.search({ type: 'track', query: input, limit: 3 }, function(err, data) {
     "Song Name: " + spotifyData.name + "\n",
     "Preview Link: " + spotifyData.preview_url + "\n",
     "Album Name: " + spotifyData.album.name + "\n")
+}
+// display 'the sign' by ace base
+else if(input == false){
+    console.log (input = "The sign")
 }
  
 // console.log(data.tracks.items); 
