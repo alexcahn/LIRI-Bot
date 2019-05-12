@@ -18,12 +18,22 @@ spotify.search({ type: 'track', query: input}, function(err, data) {
     "Preview Link: " + spotifyData.preview_url + "\n",
     "Album Name: " + spotifyData.album.name + "\n")
 }
-// display 'the sign' by ace base
-// else if(input == ""){
-//     console.log (input = "The sign")
-// }
- 
-// console.log(data.tracks.items); 
-});
+})
 
+axios.get("http://www.omdbapi.com/?apikey=d606830e&t=" + input).then(
+  function(response) {
+    //   console.log(response)
+    if (command == "movie-this"){
+    console.log(" Title: " + response.data.Title + "\n",
+    "Year: " + response.data.Year + "\n",
+    "IMBD Rating: " + response.data.imdbRating + "\n",
+    // "Rotten Tomatoes Rating: " + response.data.Ratings.Source.RottenTomatoes,
+    "Produced in: " + response.data.Country + "\n",
+    "Language: " + response.data.Language + "\n",
+    "Plot: " + response.data.Plot + "\n",
+    "Actors: " + response.data.Actors
+    )
+    }
+  }
+);
 
