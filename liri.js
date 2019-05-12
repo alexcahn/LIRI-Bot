@@ -8,7 +8,7 @@ var axios = require('axios');
 var command = process.argv[2];
 var input = process.argv[3];
   
-spotify.search({ type: 'track', query: input, limit: 3 }, function(err, data) {
+spotify.search({ type: 'track', query: input}, function(err, data) {
   if (err) {
     return console.log('Error occurred: ' + err);
   }else if (command == "spotify-this-song"){
@@ -19,9 +19,9 @@ spotify.search({ type: 'track', query: input, limit: 3 }, function(err, data) {
     "Album Name: " + spotifyData.album.name + "\n")
 }
 // display 'the sign' by ace base
-else if(input == false){
-    console.log (input = "The sign")
-}
+// else if(input == ""){
+//     console.log (input = "The sign")
+// }
  
 // console.log(data.tracks.items); 
 });
