@@ -41,7 +41,7 @@ function spotifyCall(input) {
             return console.log(" Artist: " + spotifyData.artists[0].name + "\n",
                 "Song Name: " + spotifyData.name + "\n",
                 "Preview Link: " + spotifyData.preview_url + "\n",
-                "Album Name: " + spotifyData.album.name + "\n")
+                "Album Name: " + spotifyData.album.name + "\n") 
         }
     })
 }
@@ -71,6 +71,17 @@ function movieCall(input) {
         })
 }
 
+function movieDefault(){
+    console.log(" Title: Mr. Nobody\n",
+    "Year: 2009\n",
+    "IMBD Rating: 7.8\n",
+    "Rotten Tomatoes Rating: 67%",
+    "Produced in: Belgium, Germany, Canada, France, USA, UK\n",
+    "Language: English, Mohawk\n",
+    "Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.\n",
+    "Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham")
+}
+
 function concertCall() {
     axios.get("https://rest.bandsintown.com/artists/" + input + "/events?app_id=codingbootcamp")
         .then(function (response, err) {
@@ -86,15 +97,4 @@ function concertCall() {
                 }
             }
         })
-}
-
-function movieDefault(){
-    console.log(" Title: Mr. Nobody\n",
-    "Year: 2009\n",
-    "IMBD Rating: 7.8\n",
-    "Rotten Tomatoes Rating: 67%",
-    "Produced in: Belgium, Germany, Canada, France, USA, UK\n",
-    "Language: English, Mohawk\n",
-    "Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.\n",
-    "Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham")
 }
