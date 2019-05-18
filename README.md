@@ -2,9 +2,10 @@
 Thank you for coming to check out my app called Liri-Bot! <br>
 Liri is similar to iPhone’s Siri. However, while Siri recognizes speech, Liri recognizes language. Liri collect response data from 3 API’s– Spotify, OMBD and Bands in Town – and gives you back data
 
-Spotify API code is located in the spotifyCall.js file then exported to the liri.js file. <br>
-OMBD API code is located in the movieCall.js file then exported to the liri.js file. <br>
-Bands-In-Town API code is located in the concertCall.js file then exported to the liri.js file. <br>
+Spotify API code is located in the spotifyCall.js file. <br>
+OMBD API code is located in the movieCall.js file. <br>
+Bands-In-Town API code is located in the concertCall.js. <br>
+APIs are exported to liri.js. <br>
 
 ## Demo Video
 https://drive.google.com/file/d/1czGrunBh5ubxkT4SDp4QICCuvxy4lVqk/view
