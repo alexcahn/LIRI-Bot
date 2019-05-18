@@ -17,7 +17,6 @@ function doWhatItSays() {
     fs.readFile("random.txt", "utf8", function (error, data) {
         if (error) throw error;
         data = data.split(",")
-        console.log(data)
 
         for (var i = 0; i < data.length; i++) {
             if (i % 2 === 0) {

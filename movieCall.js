@@ -2,7 +2,7 @@ const axios = require('axios');
 
 module.exports = function(movie){
     if (!movie) {
-        movie = "mr.nobody"
+        movie = "caddyshack"
     }
     axios.get("http://www.omdbapi.com/?apikey=d606830e&t=" + movie).then(
         function (response, err) {
